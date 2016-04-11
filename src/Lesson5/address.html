@@ -1,0 +1,10 @@
+<div ng-show="!!user.address && !isAddressCollapsed" ng-click="addressOpen()">
+    <h4>Address:</h4>
+    <br/> street: {{user.address.street}}
+    <br/> city: {{user.address.city}}
+    <br/> country: {{user.address.country}}
+</div>
+<div ng-show="!!user.address && isAddressCollapsed" ng-click="addressClose()">
+    <h4>Address:</h4>
+    <br/> country: {{user.address.country}} ...
+</div>
