@@ -1,0 +1,22 @@
+{
+  "name": "angular-directive-learning",
+  "description": "",
+  "main": "",
+  "authors": [
+    "hjzheng <zhenghaoju700@163.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/hjzheng/angular-directive-learning",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.3",
+    "bootstrap": "^3.3.6"
+  }
+}

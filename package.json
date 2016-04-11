@@ -1,0 +1,20 @@
+{
+  "name": "angular-directive-learning",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hjzheng/angular-directive-learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hjzheng/angular-directive-learning/issues"
+  },
+  "homepage": "https://github.com/hjzheng/angular-directive-learning#readme",
+  "dependencies": {
+  }
+}
