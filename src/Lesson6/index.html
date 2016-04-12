@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Directive Lesson 1</title>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-controller="MainCtrl" class="container-fluid">
+    <video spacebar-support  event-pause="log(evt)" controls preload="none" poster="">
+        <source src="http://www.w3schools.com/html/mov_bbb.mp4">
+    </video>
+    {{messages}}
+
+    <div class="well" my-click="clickHandler()">Please Click Me</div>
+
+    <div>
+        I am not scale. {{size}}
+        <div scale-font="size">I am scale</div>
+        <input type="text" ng-model="size">
+    </div>
+</body>
+</html>
