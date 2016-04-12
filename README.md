@@ -1,5 +1,7 @@
 # angular-directive-learning
 
+关于[angularjs-directive-fundamentals](https://app.pluralsight.com/library/courses/angularjs-directive-fundamentals/table-of-contents)学习笔记
+
 #### Lesson 1
 一个写AngularJS指令的模板, 另外一个希望大家熟悉 WebStorm 快捷键
 
@@ -71,7 +73,7 @@ angular.module("app").directive("myDirective", function(){
 
     *   Component like user-info-card
     *   Decorators like ng-click ng-show
-    *   Structure like ng-repeat
+    *   Structure like ng-repeat ng-if
 
 #### Lesson 3
 
@@ -203,3 +205,117 @@ angular.module("app").directive("scaleFont", function(){
 #### Lesson 8
 
 Transclusion
+
+1.first transclusion directive displayBox
+
+> 注意, 请将 transclude 设置成 true
+
+2.transclusion 与 scope
+
+> 注意 本例中,虽然说 displayBox 指令与 MainCtrl 是继承 scope 的关系, 但是指令的controller中的 message 变量, 却无法遮住 MainCtrl 中的
+ message 变量, 也就是说 ng-transclude 内部 scope, 直接指向外层的 MainCtrl 的 scope
+
+3.demo myQuestion directive
+
+> 注意, 我们在外层使用了对象, 为了防止直接在scope上定义所产生的覆盖
+
+#### Lesson 9
+
+structure directive
+
+1.The transclude function
+
+> 注意: transclusion 的值是 "element" , link函数的第五个参数是 transclude 函数, 注意它的用法
+
+2.The directive myLazyRender
+
+> 注意: unwatcher 用法, 具体参见 代码, 另外注意 priority 设置成 1200, 因为ng-repeat是 1000,
+这里牵扯到同一元素上, 指令执行的先后顺序. 你可以尝试将 priority 改成小于 1000, 你会发现 myLazyRender 的
+第二个例子, 不工作.
+
+3.The directive myRepeat, 当然, 这个比较简单的实现, 很多东西是不能和 ng-repeat
+
+4.The compile function
+
+```js
+angular.module("app").directive(myDirective, function () {
+    return {
+        compile: function (ele, attr) {
+            //do some things
+            return link(scope, ele, attr, ctrl, transclude) {
+
+            }
+        }
+    }
+});
+```
+
+#### Lesson 10
+
+Nested Directive
+
+1.设置controller
+
+你可以用匿名函数给赋值给controller属性, 也可以用 angular module 的 controller 方法去声明函数, 然后将函数名赋值给controller属性,
+也可以使用命名函数单独声明, 这个我注释掉了
+后者, 使你的controller从指令定义中脱离出来, 一般不建议使用.
+
+```
+controllerAs
+bindToController
+```
+
+使用这两者的好处, 是让 controller 解耦
+http://plnkr.co/edit/558TIc4lYn6ph4YmLiHb?p=preview
+
+2.preLink and postLink 方法
+
+注意, 它们的执行顺序, 使用例子中的 myParent 和 myChild 指令进行测试
+
+```
+myParent controller
+myParent prelink
+myChild controller
+myChild prelink
+myChild postlink
+myParent postlink
+```
+
+3.require 属性
+
+```
+(no prefix) - Locate the required controller on the current element. Throw an error if not found.
+? - Attempt to locate the required controller or pass null to the link fn if not found.
+^ - Locate the required controller by searching the element and its parents. Throw an error if not found.
+^^ - Locate the required controller by searching the element's parents. Throw an error if not found.
+?^ - Attempt to locate the required controller by searching the element and its parents or pass null to the link fn if not found.
+?^^ - Attempt to locate the required controller by searching the element's parents, or pass null to the link fn if not found.
+```
+
+4.练习 tab 指令
+
+
+#### Lesson 11
+
+1.指令之间的通信
+   - 公共service
+   - 可以通过$broadcast 和 $emit 方法传递事件的方式进行沟通, 这里牵扯到一个优化
+
+2.关于ngModelController
+[使用ngModelController](https://github.com/hjzheng/CUF_meeting_knowledge_share/issues/35)
+
+3.如何扩展指令
+[使用$provide.decorator方法去扩展指令](https://github.com/hjzheng/CUF_meeting_knowledge_share/issues/34)
+
+4.指令的一些相关总结
+[总结](https://github.com/hjzheng/CUF_meeting_knowledge_share/issues/31)
+  - $compile
+  - $templateCache
+  - $templateRequest
+  - directive definition object
+
+5.modal 练习 (TODO)
+
+
+
+
