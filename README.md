@@ -68,6 +68,7 @@ angular.module("app").directive("myDirective", function(){
 9.指令的命名最佳实践, 请加上 prefix, 像 AngularJS 内部指令 ng 或 ui-bootstrap 的 ui
 
 10.Types of Directives
+
     *   Component like user-info-card
     *   Decorators like ng-click ng-show
     *   Structure like ng-repeat
