@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Directive Lesson 1</title>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-controller="MainCtrl" class="container-fluid">
+    <my-transclude>
+        <ul>
+            <li ng-repeat="num in nums">
+                {{num}}
+            </li>
+        </ul>
+    </my-transclude>
+
+    <div my-lazy-render="showIt">
+        <ul>
+            <li ng-repeat="num in nums">
+                {{num}}
+            </li>
+        </ul>
+    </div>
+
+    <div my-lazy-render="showIt" ng-repeat="num in nums">
+        {{num}}
+    </div>
+    <button class="btn btn-primary" ng-click="showIt = true">Render</button>
+
+    <div my-repeat="item in items">
+        name: {{item.name}}
+    </div>
+    <button ng-click="add()">Add</button>
+    <button ng-click="remove()">Remove</button>
+</body>
+</html>

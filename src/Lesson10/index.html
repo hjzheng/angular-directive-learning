@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Directive Lesson 1</title>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-controller="MainCtrl" class="container-fluid">
+    <my-directive></my-directive>
+
+    <my-parent>
+        <my-child></my-child>
+    </my-parent>
+
+    <my-tabs>
+        <my-tab label="tab1">
+             This is first tab content
+        </my-tab>
+        <my-tab label="tab2">
+            This is second tab content
+        </my-tab>
+        <my-tab label="tab3">
+            This is third tab content
+        </my-tab>
+    </my-tabs>
+</body>
+</html>

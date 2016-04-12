@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Directive Lesson 1</title>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-controller="MainCtrl" class="container-fluid">
+    <display-box>
+        <div ng-controller="InnerCtrl">
+            <div>
+                This is a content
+            </div>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+            {{message}}
+        </div>
+    </display-box>
+    <h2>Questions</h2>
+    {{answers}}
+    <my-question q="where are you from ?">
+        <input type="text" ng-model="answers.place">
+    </my-question>
+    <my-question q="what is your name ?">
+        <input type="text" ng-model="answers.name">
+    </my-question>
+    <my-question q="Do you like AngularJS ?">
+        <input type="radio" ng-model="answers.likeAngular" value="true"> Yes
+        <input type="radio" ng-model="answers.likeAngular" value="false"> No
+    </my-question>
+    <my-question q="Do you like AngularBaby ?">
+        <input type="radio" ng-model="answers.likeBaby" value="true"> Yes
+        <input type="radio" ng-model="answers.likeBaby" value="false"> No
+    </my-question>
+</body>
+</html>
