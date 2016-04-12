@@ -35,7 +35,7 @@ ctrl + tab 快速导航
 #### Lesson 2
 AngularJS 指令的基本知识
 
-1. 你的第一个AngularJS指令
+1.你的第一个AngularJS指令
 非常的简单, 你只要返回一个空对象就行.
 ```js
 angular.module("app").directive("myDirective", function(){
@@ -46,46 +46,48 @@ angular.module("app").directive("myDirective", function(){
 ```
 > 注意: js 中的指令名称的写法, 驼峰式 camel-case, html 中的写法是 snake-case
 
-2. template 属性, 注意例子中使用的是 ES6 的多行字符串, 表示指令的模板
-3. restrict 属性, 默认是EA, 所以默认情况下, 可以用作属性和元素,
+2.template 属性, 注意例子中使用的是 ES6 的多行字符串, 表示指令的模板
+
+3.restrict 属性, 默认是EA, 所以默认情况下, 可以用作属性和元素
 ```js
 <div my-directive></div>
 <my-directive></my-directive>
 ```
 > 扩展: 关于restrict默认为什么是 EA, 这个大家可以翻看 AngularJS 源码, 搜索 `$compileProvider#directive` 查看关于指令的定义
 
-4. restrict 其他属性, CM, 关于 M 目前还没搞清楚
+4.restrict 其他属性, CM, 关于 M 目前还没搞清楚
 
-5. 在模板中加入 bindings, 参考 userInfoCard 指令
+5.在模板中加入 bindings, 参考 userInfoCard 指令
 
-6. 在模本中使用 AngularJS 内置指令 参考 userInfoCard 指令
+6.在模本中使用 AngularJS 内置指令 参考 userInfoCard 指令
 
-7. 使用 templateUrl, 将模板移出 指令定义
+7.使用 templateUrl, 将模板移出 指令定义
 
-8. 使用 replace 属性, replace 属性要求模板必须要有一个根元素
+8.使用 replace 属性, replace 属性要求模板必须要有一个根元素
 
-9. 指令的命名最佳实践, 请加上 prefix, 像 AngularJS 内部指令 ng 或 ui-bootstrap 的 ui
+9.指令的命名最佳实践, 请加上 prefix, 像 AngularJS 内部指令 ng 或 ui-bootstrap 的 ui
 
-10. Types of Directives
+10.Types of Directives
     *   Component like user-info-card
     *   Decorators like ng-click ng-show
     *   Structure like ng-repeat
 
 #### Lesson 3
 
-1. 在指令中加入 controller
+1.在指令中加入 controller
 
-2. 这种情况下 $scope 是共享的, 也就是 MainCtrl 控制器和 userCardInfo 指令的 scope 是共享的
-   为了测试它, 我们将 scope 打印出来, 在 console 中查看, 注意 $id 的值
+2.这种情况下 $scope 是共享的, 也就是 MainCtrl 控制器和 userCardInfo 指令的 scope 是共享的
+   
+  为了测试它, 我们将 scope 打印出来, 在 console 中查看, 注意 $id 的值
 
-3. 指令的 scope 属性, 默认 false 是共享 scope
+3.指令的 scope 属性, 默认 false 是共享 scope
 
-4. 将 scope 修改成true, 进行测试, 发现两个 scope 有继承关系, 其实是 js中 的原型继承.
+4.将 scope 修改成true, 进行测试, 发现两个 scope 有继承关系, 其实是 js中 的原型继承.
 
 > 扩展: 这个我们同样可以翻看 AngularJS 源码, 查找关键字 `$RootScopeProvider`, 注意下面的代码片段
 如果是 isolate, 去 new Scope(), 如果不是createChildScopeClass(this), 然而ChildScope函数使用的是 JS 的原型继承
+
 ```js
-...
  $new: function(isolate, parent) {
         var child;
 
@@ -102,20 +104,21 @@ angular.module("app").directive("myDirective", function(){
           }
           child = new this.$$ChildScope();
         }
-   ...
 ```
 
-5. 将scope修改成 {}, 进行测试, 发现指令的 scope 变成了隔离 scope
+5.将scope修改成 {}, 进行测试, 发现指令的 scope 变成了隔离 scope
 
-6. 隔离scope 如何传参
+6.隔离scope 如何传参
 
 说隔离scope如何传参之前, 看看一个元素上多个scope的情况
 
 多个指令在一个元素上的 scope 情况 两个 isolate scope 在同一个元素上，AngularJS 是不允许这样的情况出现的，会直接报错.
 请在 index.html 页面的 user-card-info 上添加,另一个隔离指令 my-directive, 如下, 进行测试
+
 ```html
 <user-card-info my-directive></user-card-info>
 ```
+
 > 其他情况 https://segmentfault.com/q/1010000004028966/a-1020000004030499
 
 > 最佳实践: 不要在同一个元素上多个指令中使用inherit scope 相同的名字有可能被覆盖掉
@@ -124,30 +127,32 @@ angular.module("app").directive("myDirective", function(){
 
 隔离 scope 中的传参, 参考本节中的例子
 
-1. 传递字符串 @
+1.传递字符串 @
 
 > 小技巧: 传入一个简单的值 @传入字符串，如果是 boolean，需要自己转换 下面的方法不错
 >  $scope.isCollapsed = ($scope.collapsed === "true");
 
-2. 传递对象 =
+2.传递对象 =
 
-3. 传递函数 &
+3.传递函数 &
 
 #### Lesson 5
 
 重构 userCardInfo 指令
 
-1. 进行重构 1
+1.进行重构 1
+
 抽取 address 指令
 
-2. 进行重构 2
+2.进行重构 2
+
 添加 removeFriend 指令
 
 #### Lesson 6
 
 Decorator Directive
 
-1. The link function
+1.The link function
 
 link: function postLink(scope, iElement, iAttrs, controller) { ... }
 
@@ -171,9 +176,9 @@ angular.module("app").directive("eventPause", function($parse){
 });
 ```
 
-2. Recreate ng-click, 参见指令 my-click
+2.Recreate ng-click, 参见指令 my-click
 
-3. 使用 $watch 观察值的变化, Example scale-font
+3.使用 $watch 观察值的变化, Example scale-font
 
 ```js
 angular.module("app").directive("scaleFont", function(){
