@@ -2,8 +2,6 @@ angular-directive-learning
 ====
 关于[angularjs-directive-fundamentals](https://app.pluralsight.com/library/courses/angularjs-directive-fundamentals/table-of-contents)学习笔记
 
-[TOC]
-
 #### 如何使用
 
 用bower安装AngularJS等依赖
@@ -147,7 +145,11 @@ angular.module("app").directive("myDirective", function(){
 
 2.传递对象 =
 
+> 可以用 $scope.$watch 去 watch 该数值的变化, 可以参考 Lession 11 myPagination 指令
+
 3.传递函数 &
+
+> 如何给该函数传递参数, 请参考 Lession 11 的 myPagination 指令的 onSelectPage
 
 #### Lesson 5
 
@@ -312,6 +314,7 @@ myParent postlink
    - 可以通过$broadcast 和 $emit 方法传递事件的方式进行沟通, 这里牵扯到一个优化
 
 2.关于ngModelController
+除了参考下面文章中的例子外,也可以试试 本节中 myValidateAddress 的指令, 注意观察 $formatter 和 $parser 执行的变化
 [使用ngModelController](https://github.com/hjzheng/CUF_meeting_knowledge_share/issues/35)
 
 3.如何扩展指令
@@ -324,7 +327,12 @@ myParent postlink
   - $templateRequest
   - directive definition object
 
-5.modal 练习
+5.pagination 练习
+
+6.modal 练习
+
+
+
 
 
 

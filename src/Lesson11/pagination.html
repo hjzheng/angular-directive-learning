@@ -1,0 +1,17 @@
+<nav>
+    <ul class="pagination">
+        <li ng-click="prePage()">
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li ng-repeat="num in totalPages" ng-click="selectPage(num)" ng-class="{'active' : currentPage === num}">
+            <a href="#">{{num}}</a>
+        </li>
+        <li ng-click="nextPage()">
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>

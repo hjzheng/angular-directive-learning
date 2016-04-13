@@ -6,9 +6,22 @@
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="index.css"/>
     <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="pagination.js"></script>
     <script src="index.js"></script>
+
 </head>
 <body ng-controller="MainCtrl" class="container-fluid">
+    <my-pagination total-items="{{totalItems}}" page-size="myPageSize" on-select-page="selectHandler(start, end)"></my-pagination>
+    <select ng-model="myPageSize">
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+    </select>
 
+    <br>
+    Model: {{address}}
+    UI: <input type="text" ng-model="address" my-validate-address />
+    <button ng-click="changeAddress()">change Address</button>
 </body>
 </html>

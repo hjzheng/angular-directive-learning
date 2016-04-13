@@ -81,6 +81,8 @@ angular.module("app").directive("userCardInfo", function(){
 *
 * 传递对象 =
 *
+* 可以用 $scope.$watch 去 watch 该数值的变化, 可以参考
+*
 * 传递函数 &
 *
 * */
