@@ -1,6 +1,16 @@
-# angular-directive-learning
-
+angular-directive-learning
+====
 关于[angularjs-directive-fundamentals](https://app.pluralsight.com/library/courses/angularjs-directive-fundamentals/table-of-contents)学习笔记
+
+[TOC]
+
+#### 如何使用
+
+用bower安装AngularJS等依赖
+
+```
+bower intall
+```
 
 #### Lesson 1
 一个写AngularJS指令的模板, 另外一个希望大家熟悉 WebStorm 快捷键
@@ -295,7 +305,7 @@ myParent postlink
 4.练习 tab 指令
 
 
-#### Lesson 11
+#### Lesson 11 (TODO)
 
 1.指令之间的通信
    - 公共service
@@ -314,7 +324,7 @@ myParent postlink
   - $templateRequest
   - directive definition object
 
-5.modal 练习 (TODO)
+5.modal 练习
 
 
 
