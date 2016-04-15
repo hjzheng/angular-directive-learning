@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
@@ -15,6 +15,8 @@
     "url": "https://github.com/hjzheng/angular-directive-learning/issues"
   },
   "homepage": "https://github.com/hjzheng/angular-directive-learning#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.9"
   }
 }

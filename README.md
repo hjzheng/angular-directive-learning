@@ -7,7 +7,7 @@ angular-directive-learning
 用bower安装AngularJS等依赖
 
 ```
-bower intall
+npm intall
 ```
 
 #### Lesson 1
@@ -307,20 +307,24 @@ myParent postlink
 4.练习 tab 指令
 
 
-#### Lesson 11 (TODO)
+#### Lesson 11
 
 1.指令之间的通信
    - 公共service
    - 可以通过$broadcast 和 $emit 方法传递事件的方式进行沟通, 这里牵扯到一个优化
 
 2.关于ngModelController
+
 除了参考下面文章中的例子外,也可以试试 本节中 myValidateAddress 的指令, 注意观察 $formatter 和 $parser 执行的变化
+
 [使用ngModelController](https://github.com/hjzheng/CUF_meeting_knowledge_share/issues/35)
 
 3.如何扩展指令
+
 [使用$provide.decorator方法去扩展指令](https://github.com/hjzheng/CUF_meeting_knowledge_share/issues/34)
 
 4.指令的一些相关总结
+
 [总结](https://github.com/hjzheng/CUF_meeting_knowledge_share/issues/31)
   - $compile
   - $templateCache
@@ -329,7 +333,11 @@ myParent postlink
 
 5.pagination 练习
 
-6.modal 练习
+6.modal 练习 (TODO)
+
+#### Lesson 12
+
+1.grid 指令
 
 
 
