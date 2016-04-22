@@ -18,5 +18,8 @@
   "dependencies": {
     "angular": "angularjs#^1.5.3",
     "bootstrap": "^3.3.6"
+  },
+  "devDependencies": {
+    "jquery-ui": "jqueryui#^1.11.4"
   }
 }

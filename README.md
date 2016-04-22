@@ -337,7 +337,9 @@ myParent postlink
 
 #### Lesson 12
 
-1.grid 指令
+1.如何将JQuery UI 包装成 AngularJS 指令
+
+2.grid 指令 (TODO)
 
 
 
