@@ -4,7 +4,7 @@ angular-directive-learning
 
 #### 如何使用
 
-用bower安装AngularJS等依赖
+安装AngularJS等依赖
 
 ```
 npm intall
@@ -123,7 +123,7 @@ angular.module("app").directive("myDirective", function(){
 
 说隔离scope如何传参之前, 看看一个元素上多个scope的情况
 
-多个指令在一个元素上的 scope 情况 两个 isolate scope 在同一个元素上，AngularJS 是不允许这样的情况出现的，会直接报错.
+多个指令在一个元素上的 scope 情况, 两个 isolate scope 在同一个元素上，AngularJS 是不允许这样的情况出现的，会直接报错.
 请在 index.html 页面的 user-card-info 上添加,另一个隔离指令 my-directive, 如下, 进行测试
 
 ```html
