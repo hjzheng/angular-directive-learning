@@ -341,7 +341,17 @@ myParent postlink
 
 2.grid 指令 (TODO)
 
+#### Lesson 13
 
+1. AngularJS 1.5 Components [官方指南中的 component](https://docs.angularjs.org/guide/component), 说白了, component 是一种特殊的指令
+
+2. 使用 component 方式写一个 tab 指令
+
+3. 注意 component controller 中的 lifecycle hook 方法如何使用
+  - $onInit()
+  - $onChanges(changesObj)
+  - $onDestroy()
+  - $postLink()
 
 
 

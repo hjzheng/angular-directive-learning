@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Directive Lesson 1</title>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-controller="MainCtrl" class="container-fluid">
+    <my-component name="test"></my-component>
+
+    <my-tabs>
+        <my-tab label="tab1">content1</my-tab>
+        <my-tab label="tab2">content2</my-tab>
+        <my-tab label="tab3">content3</my-tab>
+        <my-tab label="tab4">content4</my-tab>
+        <my-tab label="tab5">content5</my-tab>
+        <my-tab label="tab6">content6</my-tab>
+    </my-tabs>
+</body>
+</html>
