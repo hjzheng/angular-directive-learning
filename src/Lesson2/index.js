@@ -30,7 +30,7 @@ angular.module("app").directive("myDirective", function(){
 
 angular.module("app").directive("userCardInfo", function(){
     return {
-        //用到ES6的多行字符串
+        //用到ES6的模板字面量
         template: `name: {{user.name}} <br/> 
               address: <br/> 
               street: {{user.address.street}} <br/> 
@@ -47,7 +47,7 @@ angular.module("app").directive("userCardInfo", function(){
 /*
 * 1. First AngularJS Directive
 * 非常的简单, 你只要返回一个对象就行.
-* 注意: js 中的指令名称的写法, 驼峰式 camel-case, html 中的写法是 snake-case
+* 注意: js 中的指令名称的写法,camelCase, html 中的写法是 snake-case
 *
 * 2. 在对象中加入一个 template 属性, 注意这里使用的是 ES6 的多行字符串, 表示指令的模板
 *

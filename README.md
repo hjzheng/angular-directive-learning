@@ -54,9 +54,9 @@ angular.module("app").directive("myDirective", function(){
     };
 });
 ```
-> 注意: js 中的指令名称的写法, 驼峰式 camel-case, html 中的写法是 snake-case
+> 注意: js 中的指令名称的写法, camelCase, html 中的写法是 snake-case
 
-2.template 属性, 注意例子中使用的是 ES6 的多行字符串, 表示指令的模板
+2.template 属性, 注意例子中使用的是 ES6 的模板字面量, 表示指令的模板
 
 3.restrict 属性, 默认是EA, 所以默认情况下, 可以用作属性和元素
 ```js
