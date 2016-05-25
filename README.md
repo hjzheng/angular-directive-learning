@@ -337,7 +337,7 @@ myParent postlink
 
 #### Lesson 12
 
-1.如何将JQuery UI 包装成 AngularJS 指令
+1.如何将 JQuery UI 包装成 AngularJS 指令
 
 2.grid 指令 (TODO)
 
@@ -353,7 +353,27 @@ myParent postlink
   - $onDestroy()
   - $postLink()
 
+4.Angular Component: no template replace option? 没有 replace 选项
+[stackoverflow上的回答](http://stackoverflow.com/questions/35290332/angular-component-no-template-replace-option)
 
 
+#### Lesson 14
 
+1.一次定义多个指令, 在directive方法中传入对象, 可以参考 AngularJS 中的源码
 
+```
+   directive({
+            a: htmlAnchorDirective,
+            input: inputDirective,
+            textarea: inputDirective,
+            form: formDirective,
+            script: scriptDirective,
+            select: selectDirective,
+            style: styleDirective,
+            option: optionDirective,
+            ngBind: ngBindDirective,
+            ngBindHtml: ngBindHtmlDirective,
+            ngBindTemplate: ngBindTemplateDirective,
+            ngClass: ngClassDirective,
+```
+2. 可以通过返回 function 方式(其实是postlink方法), 去定义一个指令, 参考 Lesson 14 中的例子
