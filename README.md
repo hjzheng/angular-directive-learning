@@ -376,4 +376,4 @@ myParent postlink
             ngBindTemplate: ngBindTemplateDirective,
             ngClass: ngClassDirective,
 ```
-2. 可以通过返回 function 方式(其实是postlink方法), 去定义一个指令, 参考 Lesson 14 中的例子
+2.可以通过返回 function 方式(其实是postlink方法), 去定义一个指令, 参考 Lesson 14 中的例子
