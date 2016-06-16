@@ -318,6 +318,7 @@ myParent postlink
 除了参考下面文章中的例子外,也可以试试 本节中 myValidateAddress 的指令, 注意观察 $formatter 和 $parser 执行的变化
 
 [使用ngModelController](https://github.com/hjzheng/CUF_meeting_knowledge_share/issues/35)
+[switch指令](https://github.com/hjzheng/newcomer/tree/master/src/angularPractice/switch)
 
 3.如何扩展指令
 
