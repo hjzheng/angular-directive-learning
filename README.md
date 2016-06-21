@@ -348,7 +348,7 @@ myParent postlink
 
 2.使用 component 方式写一个 tab 指令
 
-3.注意 component controller 中的 lifecycle hook 方法如何使用
+3.注意 component controller 中的 lifecycle hook 方法如何使用 更多内容[angular1.5 lifecycle hooks](https://toddmotto.com/angular-1-5-lifecycle-hooks)
   - $onInit()
   - $onChanges(changesObj)
   - $onDestroy()
