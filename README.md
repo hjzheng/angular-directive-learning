@@ -378,3 +378,5 @@ myParent postlink
             ngClass: ngClassDirective,
 ```
 2.可以通过返回 function 方式(其实是postlink方法), 去定义一个指令, 参考 Lesson 14 中的例子
+
+3.[AngularJS 1.x 指令 属性绑定 说明](https://gist.github.com/hjzheng/0dc74375a2331a4361fdad8c5a3d37da)
